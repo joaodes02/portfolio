@@ -413,11 +413,66 @@ em {
   opacity: 0.7;
 }
 
+.project-card--link {
+  cursor: pointer;
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-flag {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 999px;
+  border: 1px solid;
+  line-height: 1.1;
+}
+
+.flag-andamento {
+  color: #e8a735;
+  border-color: rgba(232, 167, 53, 0.25);
+  background: rgba(232, 167, 53, 0.1);
+}
+
+.flag-concluido {
+  color: #34d399;
+  border-color: rgba(52, 211, 153, 0.25);
+  background: rgba(52, 211, 153, 0.1);
+}
+
+.flag-privado {
+  color: var(--muted);
+  border-color: var(--line);
+  background: var(--card);
+}
+
 .project-card h3 {
   font-family: var(--font-fraunces), "Times New Roman", serif;
   font-size: 1.05rem;
   font-weight: 600;
   line-height: 1.25;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.card-arrow {
+  width: 14px;
+  height: 14px;
+  color: var(--muted);
+  flex-shrink: 0;
+  transition: color 160ms ease, transform 160ms ease;
+}
+
+.project-card--link:hover .card-arrow {
+  color: var(--accent);
+  transform: translate(1px, -1px);
 }
 
 .project-card p {

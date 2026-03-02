@@ -23,28 +23,44 @@ const projetos = [
     nome: "UpFesty - Ingresso",
     descricao:
       "Plataforma de venda de ingressos para eventos, com gestão completa para organizadores e experiência fluida para compradores.",
+    status: "andamento",
+    link: "https://www.upfesty.com/",
   },
   {
     nome: "Litográfica California",
     descricao:
       "Sistema de controle de produção e vendas para litográfica, otimizando processos e melhorando a gestão de pedidos.",
+    status: "privado",
+    link: null,
   },
   {
     nome: "Fundacão Cesar Morani",
     descricao:
       "Site institucional para fundação, com foco em transparência e engajamento.",
+    status: "andamento",
+    link: "https://www.cesarmorani.com/",
   },
   {
     nome: "Carreira Inteligente",
     descricao:
       "Agente de IA, mentor de carreira, ajudando profissionais a chegarem no cargo sonhado.",
+    status: "concluido",
+    link: "https://plano-carreira.online",
   },
   {
     nome: "Cresça & Enriqueça",
     descricao:
       "Blog de finanças pessoais, investimentos e desenvolvimento pessoal.",
+    status: "concluido",
+    link: "https://www.crescaenriqueca.com.br/",
   },
 ];
+
+const statusConfig = {
+  andamento: { label: "Em andamento", classe: "flag-andamento" },
+  concluido: { label: "Concluído", classe: "flag-concluido" },
+  privado: { label: "Privado", classe: "flag-privado" },
+};
 
 const servicos = [
   {
@@ -225,15 +241,35 @@ export default function Home() {
           <h2 className="section-title">Projetos anteriores</h2>
 
           <div className="projects-grid">
-            {projetos.map((projeto, idx) => (
-              <article key={projeto.nome} className="project-card">
-                <span className="card-index">
-                  {String(idx + 1).padStart(2, "0")}
-                </span>
-                <h3>{projeto.nome}</h3>
-                <p>{projeto.descricao}</p>
-              </article>
-            ))}
+            {projetos.map((projeto, idx) => {
+              const flag = statusConfig[projeto.status];
+              const Wrapper = projeto.link ? "a" : "div";
+              const wrapperProps = projeto.link
+                ? { href: projeto.link, target: "_blank", rel: "noreferrer" }
+                : {};
+
+              return (
+                <Wrapper
+                  key={projeto.nome}
+                  className={`project-card ${projeto.link ? "project-card--link" : ""}`}
+                  {...wrapperProps}
+                >
+                  <div className="card-top">
+                    <span className="card-index">
+                      {String(idx + 1).padStart(2, "0")}
+                    </span>
+                    <span className={`card-flag ${flag.classe}`}>
+                      {flag.label}
+                    </span>
+                  </div>
+                  <h3>
+                    {projeto.nome}
+                    {projeto.link && <HiArrowUpRight className="card-arrow" />}
+                  </h3>
+                  <p>{projeto.descricao}</p>
+                </Wrapper>
+              );
+            })}
           </div>
         </section>
 
