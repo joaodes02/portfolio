@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">JV favicon</title>
+  <desc id="desc">Monograma JV para favicon.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#101010" />
+      <stop offset="100%" stop-color="#020202" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c9c9c9" />
+      <stop offset="100%" stop-color="#f7f7f7" />
+    </linearGradient>
+  </defs>
+
+  <rect x="4" y="4" width="120" height="120" rx="24" fill="url(#bg)" />
+  <rect x="14" y="14" width="100" height="100" rx="18" fill="none" stroke="#ffffff" stroke-opacity="0.14" />
+
+  <text
+    x="64"
+    y="79"
+    text-anchor="middle"
+    fill="url(#accent)"
+    font-family="DM Sans, Arial, sans-serif"
+    font-size="56"
+    font-weight="700"
+    letter-spacing="2"
+  >
+    JV
+  </text>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">Foto de perfil</title>
+  <desc id="desc">Placeholder para foto de perfil redonda.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2b5ea4" />
+      <stop offset="100%" stop-color="#0f213f" />
+    </linearGradient>
+    <linearGradient id="coat" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#f1f6ff" stop-opacity="0.92" />
+      <stop offset="100%" stop-color="#d7e4ff" stop-opacity="0.95" />
+    </linearGradient>
+  </defs>
+
+  <rect width="240" height="240" fill="url(#bg)" />
+  <circle cx="120" cy="90" r="46" fill="url(#coat)" />
+  <path d="M28 216c14-45 44-69 92-69s78 24 92 69" fill="url(#coat)" />
+  <circle cx="120" cy="120" r="95" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="4" />
+  <text x="120" y="198" text-anchor="middle" fill="#eef4ff" font-size="30" font-family="Trebuchet MS, sans-serif" letter-spacing="3">
+    JD
+  </text>
+</svg>
